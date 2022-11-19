@@ -3,7 +3,9 @@ package ba.unsa.etf.rpr;
 import java.util.Stack;
 
 /**
- * The type Expression evaluator.
+ * Author: @Bakir Pljakic
+ * Class ExpressionEvaluater
+ * Class that evaulates arithmetic expressions using Dijkstra's algorithm
  */
 public class ExpressionEvaluator {
     private static Stack<String> operatori = new Stack<String>();
@@ -16,7 +18,7 @@ public class ExpressionEvaluator {
     /**
      * Evaluate double.
      * @param s the expression for evaluation as a String
-     * @return the evaluated expression
+     * @return double the evaluated expression
      */
     public static Double evaluate(String s) //throws RuntimeException
     {

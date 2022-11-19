@@ -1,12 +1,13 @@
 package ba.unsa.etf.rpr;
 
 /**
- * The type App.
+ * Author: @Bakir Pljakic
+ * Class App
+ * Class that parses and validates console input from args parameter
  */
 public class App {
     /**
      * The entry point of application.
-     *
      * @param args the input arguments
      */
     public static void main(String[] args) {
