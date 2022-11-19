@@ -11,7 +11,12 @@ public class ExpressionEvaluator {
     private static Stack<String> operatori = new Stack<String>();
     private static Stack<Double> vrijednosti = new Stack<Double>();
 
-    private static String[] stringUStringNiz(String s) {
+    /**
+     *
+     * @param s returns an array of strings based on method parameter string
+     * @return
+     */
+    public static String[] stringUStringNiz(String s) {
         return s.split(" ");
     }
 
