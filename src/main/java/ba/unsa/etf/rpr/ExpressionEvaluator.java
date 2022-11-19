@@ -12,7 +12,6 @@ public class ExpressionEvaluator {
     private static Stack<Double> vrijednosti = new Stack<Double>();
 
     /**
-     *
      * @param s returns an array of strings based on method parameter string
      * @return
      */
@@ -22,6 +21,7 @@ public class ExpressionEvaluator {
 
     /**
      * Evaluate double.
+     *
      * @param s the expression for evaluation as a String
      * @return double the evaluated expression
      */
@@ -43,8 +43,10 @@ public class ExpressionEvaluator {
                 if (op.equals("+")) vr = vrijednosti.pop() + vr;
                 else if (op.equals("-")) vr = vrijednosti.pop() - vr;
                 else if (op.equals("*")) vr = vrijednosti.pop() * vr;
-                else if (op.equals("/")) vr = vrijednosti.pop() / vr;
-                else if (op.equals("sqrt")) vr = Math.sqrt(vr);
+                else if (op.equals("/")) {
+                    if (vr == 0) throw new RuntimeException("Nelegalna operacija!");
+                    vr = vrijednosti.pop() / vr;
+                } else if (op.equals("sqrt")) vr = Math.sqrt(vr);
                 vrijednosti.push(vr);
             } else try {
                 vrijednosti.push(Double.parseDouble(n[i]));
