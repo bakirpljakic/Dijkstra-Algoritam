@@ -10,11 +10,10 @@ public class App {
      * The entry point of application.
      * @param args the input arguments
      */
-    public static void main(String args) {
+    public static void main(String[] args) {
         String input = new String();
-        String[] niz =  ExpressionEvaluator.stringUStringNiz(args);
-        for (int i = 0; i < niz.length; i++) {
-            input += (niz[i]+ " ");
+        for (int i = 0; i < args.length; i++) {
+            input += (args[i]+ " ");
         }
         try {
             double result = ExpressionEvaluator.evaluate(input.toString());
